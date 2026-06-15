@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victorien AI — Connexion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #12102a;
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #1a1835;
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px 36px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #6c5ce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon i {
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .logo-text .name {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f0eeff;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-text .sub {
+            font-size: 12px;
+            color: #7c6fff;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #f0eeff;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #7a7899;
+            margin-bottom: 28px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: #a09ec0;
+            margin-bottom: 7px;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 17px;
+            color: #5a5880;
+            pointer-events: none;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            background: #12102a;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 11px 14px 11px 42px;
+            color: #e8e4ff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #4a4868;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #6c5ce7;
+        }
+
+        .btn {
+            width: 100%;
+            background: #6c5ce7;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #7d6ef5;
+        }
+
+        .footer-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #7a7899;
+        }
+
+        .footer-link a {
+            color: #7c6fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            background: rgba(226, 75, 74, 0.12);
+            border: 0.5px solid rgba(226, 75, 74, 0.3);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: #f09595;
+            margin-bottom: 16px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="logo">
+        <div class="logo-icon"><i class="ti ti-robot"></i></div>
+        <div class="logo-text">
+            <div class="name">VICTORIEN &nbsp; AI</div>
+            <div class="sub">En ligne</div>
+        </div>
+    </div>
+
+    <h1>Connexion</h1>
+    <p class="subtitle">Bienvenue ! Connecte-toi pour continuer.</p>
+
+    <div class="error" id="error-msg">Identifiants incorrects. Vérifie ton email et mot de passe.</div>
+
+    <form action="/login" method="POST">
+        <div class="field">
+            <label>Adresse email</label>
+            <div class="input-wrap">
+                <i class="ti ti-mail"></i>
+                <input type="email" name="email" placeholder="exemple@email.com" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Mot de passe</label>
+            <div class="input-wrap">
+                <i class="ti ti-lock"></i>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Se connecter</button>
+    </form>
+
+    <div class="footer-link">
+        Pas encore de compte ? <a href="/register">S'inscrire</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -6,8 +6,7 @@ import os
 
 app = Flask(__name__)
 
-## Variable d'environement 
-app = Flask(__name__)
+## Variable d'environement
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 DATABASE_URL = os.environ.get("DATABASE_URL")

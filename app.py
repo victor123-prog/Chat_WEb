@@ -63,7 +63,7 @@ def login():
         cur.execute("SELECT * FROM users WHERE email=%s", (email,))
         user = cur.fetchone()
         cur.close()
-        # conn.close()  # Ne pas fermer la connexion ici, elle est utilisée dans d'autres parties
+        conn.close()  # Ne pas fermer la connexion ici, elle est utilisée dans d'autres parties
 
         if user and check_password_hash(user[3], password):
             session["user_id"] = user[0]

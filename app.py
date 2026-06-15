@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-
+app.secret_key = os.environ.get("SECRET_KEY")
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 DATABASE_URL = os.environ.get("DATABASE_URL")
